@@ -1,0 +1,7 @@
+{
+  "serverPort": 5000,
+  "dbUrl": "mongodb://localhost:27017/cloud",
+  "secretKey": "CLOUD_SECRET_KEY",
+  "filePath": "C:\\Users\\User\\Desktop\\mern-cloud-disk\\server\\files",
+  "staticPath": "C:\\Users\\User\\Desktop\\mern-cloud-disk\\server\\static"
+}

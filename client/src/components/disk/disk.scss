@@ -1,0 +1,65 @@
+@import "../../utils/colors.scss";
+
+.disk {
+  margin-top: 20px;
+  &__btns {
+    display: flex;
+    button {
+      padding: 8px 12px;
+      background: transparent;
+      border-radius: 8px;
+      border: 1px solid $font-color;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+  &__create {
+    margin-left: 10px;
+  }
+
+  &__upload {
+    margin-left: 10px;
+    &-label {
+      display: block;
+      height: 100%;
+      padding: 8px 12px;
+      border: 2px dashed $font-color;
+      cursor: pointer;
+      &:hover {
+        border-style: dotted;
+      }
+    }
+    &-input {
+      display: none;
+    }
+  }
+
+  &-select {
+    font-size: 0.875rem;
+    padding: 0.625rem;
+    --tw-bg-opacity: 1;
+    --tw-border-opacity: 1;
+    border-color: $font-color;
+    color: $font-color;
+    background-color: transparent;
+    border-width: 1.5px;
+    border-radius: 0.5rem;
+    // margin-left: auto;
+  }
+  &-select:focus-visible {
+    outline: none;
+  }
+}
+
+.drop-area {
+  width: 100%;
+  height: calc(100vh - 90px);
+  margin: 20px;
+  border: 3px dashed $font-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}

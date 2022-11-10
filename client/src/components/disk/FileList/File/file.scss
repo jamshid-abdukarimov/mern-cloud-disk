@@ -1,0 +1,56 @@
+@import "../../../../utils/colors.scss";
+
+.file {
+  margin: 10px 0;
+  border-bottom: solid 2px $font-color;
+  display: grid;
+  grid-template-columns: 1fr 4fr repeat(4, 1fr);
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.02);
+    .file__btn {
+      display: block;
+    }
+
+    .file__date {
+      grid-column-start: 3;
+    }
+    .file__size {
+      grid-column-start: 4;
+    }
+  }
+  &__img {
+    justify-self: center;
+  }
+
+  &__date {
+    grid-column-start: 5;
+    justify-self: center;
+  }
+  &__size {
+    grid-column-start: 6;
+    justify-self: center;
+  }
+
+  .file__btn {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    max-width: max-content;
+    border: 1.5px solid $font-color;
+    border-radius: 16px;
+    cursor: pointer;
+    display: none;
+    justify-self: center;
+
+    img {
+      width: 20px;
+      height: 20px;
+      filter: invert(38%) sepia(34%) saturate(417%) hue-rotate(178deg)
+        brightness(94%) contrast(85%);
+    }
+  }
+}

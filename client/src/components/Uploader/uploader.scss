@@ -1,0 +1,79 @@
+@import "../../utils/colors.scss";
+
+.open__uploader {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  button {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1px solid #56688580;
+    // border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    background-color: #56688532;
+    cursor: pointer;
+  }
+  img {
+    width: 80%;
+  }
+}
+.uploader {
+  height: 300px;
+  width: 300px;
+  position: fixed;
+  background-color: $font-color;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-y: auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    color: $background-color;
+    font-size: 1.2rem;
+  }
+  &__close {
+    width: 30px;
+    height: 20px;
+  }
+}
+
+.upload-file {
+  background-color: $background-color;
+  border-radius: 8px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__progress-bar {
+    height: 1rem;
+    border-radius: 8px;
+    background-color: $font-color;
+    display: flex;
+    margin: 3px 0;
+  }
+
+  &__upload-bar {
+    background-color: green;
+    border-radius: 8px;
+  }
+  &__percent {
+    color: $background-color;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+}
