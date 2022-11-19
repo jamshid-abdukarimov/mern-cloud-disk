@@ -1,6 +1,9 @@
+const fs = require("fs");
 class Path {
   filePath(path) {
     return function (req, res, next) {
+      if (!fs.existsSync(path)) fs.mkdirSync(path);
+
       req.filePath = path;
       next();
     };
@@ -8,6 +11,8 @@ class Path {
 
   staticPath(path) {
     return function (req, res, next) {
+      if (!fs.existsSync(path)) fs.mkdirSync(path);
+
       req.staticPath = path;
       next();
     };
